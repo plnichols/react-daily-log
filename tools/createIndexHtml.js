@@ -1,3 +1,7 @@
+// This file creates a new index.html that includes a CSS stylesheet.
+// This is required as the dev version of index.html doesn't load CSS since
+// the styles are imported using Webpack.
+
 import fs from 'fs';
 import cheerio from 'cheerio';
 import colors from 'colors';

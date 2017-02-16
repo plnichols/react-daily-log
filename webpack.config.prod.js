@@ -2,10 +2,6 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-const GLOBALS = {
-  'process.env.MODE_ENV': JSON.stringify('production')
-};
-
 export default {
   debug: true,
   devtool: 'source-map',
@@ -22,7 +18,7 @@ export default {
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS),
+    new webpack.DefinePlugin({'process.env':{NODE_ENV:JSON.stringify('production')}}),
     new ExtractTextPlugin('styles.css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin()

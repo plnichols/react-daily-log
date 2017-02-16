@@ -9,6 +9,22 @@
 - Run `npm lint:watch` to run linting and watch for file changes
 - Run `npm test:watch` to run test suite and watch for file changes
 - Run `npm build` to build the production package in `./dist` folder
+
+##Tools/Features
+- React
+- Redux (router, thunk, logger)
+- Hot Reloading
+- Express
+- MongoDB (still to come)
+- Webpack
+- ESLint
+- Babel
+- Mocha
+- Enzyme
+- JSDom
+- Expect
+- Bootstrap
+- npm
  
- ##Notes
+##Notes
 App based on Cory House `React Redux Starter Kit`: https://github.com/coryhouse/pluralsight-redux-starter.git

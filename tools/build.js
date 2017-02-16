@@ -10,7 +10,7 @@ import colors from 'colors';
 process.env.NODE_ENV = 'production'; // this assures the Babel dev config (for hot reloading) doesn't apply
 
 webpack(webpackConfig).run((err, stats) => {
-  if (err) { // so a fatal error occured. Stop here.
+  if (err) { // so a fatal error occurred. Stop here.
     console.log(err.bold.red);
   }
 
@@ -28,7 +28,7 @@ webpack(webpackConfig).run((err, stats) => {
   console.log(`Webpack stats: ${stats}`);
 
   // if we got this far, the build succeeded
-  console.log('Your app has been compiled in prodcution mode and written to /dist. It\'s ready to roll!'.green);
+  console.log('Your app has been compiled in production mode and written to /dist. It\'s ready to roll!'.green);
 
   return 0;
 });
