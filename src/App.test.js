@@ -4,7 +4,9 @@ import { shallow } from 'enzyme';
 import { App } from './App';
 
 function uut() {
-  return shallow(<App />);
+  // here we're mocking the children props
+  // this would usually be a component returned by the router
+  return shallow(<App children={<home className="home" />} />);
 }
 
 describe('App', () => {
@@ -12,7 +14,13 @@ describe('App', () => {
     const wrapper = uut();
 
     expect(wrapper.find('.header').node).toExist();
-    expect(wrapper.find('.container').node).toExist();
+    expect(wrapper.find('.content').node).toExist();
     expect(wrapper.find('.footer').node).toExist();
+  });
+
+  it('should render the home component in the content element', () => {
+    const wrapper = uut();
+
+    expect(wrapper.find('.content').find('.home').node).toExist();
   });
 });

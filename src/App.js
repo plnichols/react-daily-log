@@ -7,7 +7,7 @@ export class App extends React.Component {
       <div className="container-fluid">
         <header className="header" />
 
-        <div className="container">
+        <div className="content">
           {this.props.children}
         </div>
 
