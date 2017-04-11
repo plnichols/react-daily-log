@@ -3,6 +3,7 @@ import expect from 'expect';
 import { shallow } from 'enzyme';
 import { App } from './App';
 
+// Unit Under Test
 function uut() {
   // here we're mocking the children props
   // this would usually be a component returned by the router
