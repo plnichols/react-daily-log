@@ -6,9 +6,9 @@
 - Run `npm start` to start application (use flag `-s` to trigger silent mode)
 
 ##Development
-- Run `npm lint:watch` to run linting and watch for file changes
-- Run `npm test:watch` to run test suite and watch for file changes
-- Run `npm build` to build the production package in `./dist` folder
+- Run `npm run lint:watch` to run linting and watch for file changes
+- Run `npm run test:watch` to run test suite and watch for file changes
+- Run `npm run build` to build the production package in `./dist` folder
 
 ##Tools/Features
 - React

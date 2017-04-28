@@ -1,7 +1,7 @@
-import React from 'react';
-import expect from 'expect';
-import { shallow } from 'enzyme';
-import { App } from './App';
+import React from "react";
+import expect from "expect";
+import { shallow } from "enzyme";
+import { App } from "./App";
 
 // Unit Under Test
 function uut() {
@@ -10,18 +10,18 @@ function uut() {
   return shallow(<App children={<home className="home" />} />);
 }
 
-describe('App', () => {
-  it('should render the header, footer and container', () => {
+describe("App", () => {
+  it("should render the header, footer and container", () => {
     const wrapper = uut();
 
-    expect(wrapper.find('.header').node).toExist();
-    expect(wrapper.find('.content').node).toExist();
-    expect(wrapper.find('.footer').node).toExist();
+    expect(wrapper.find(".header").node).toExist();
+    expect(wrapper.find(".content").node).toExist();
+    expect(wrapper.find(".footer").node).toExist();
   });
 
-  it('should render the home component in the content element', () => {
+  it("should render the home component in the content element", () => {
     const wrapper = uut();
 
-    expect(wrapper.find('.content').find('.home').node).toExist();
+    expect(wrapper.find(".content").find(".home").node).toExist();
   });
 });
