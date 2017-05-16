@@ -1,4 +1,5 @@
 import React from "react";
+import Form from '../form/Form';
 
 class Home extends React.Component {
 	render() {
@@ -14,7 +15,7 @@ class Home extends React.Component {
 						<h3>New entry</h3>
 					</div>
 					<div className="panel-body">
-						<form action=""></form>
+						<Form/>
 					</div>
 				</div>
 

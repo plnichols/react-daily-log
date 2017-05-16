@@ -8,8 +8,10 @@ function uut() {
 	return shallow(<List />);
 }
 
-describe('List', function() {
-	it('should load a list of daily log', function(done) {
-		
+describe('List', () => {
+	it('should start with an empty list', function() {
+    const wrapper = uut();
+
+    expect(wrapper.props.logs.length).toBe(0);
 	});
 });

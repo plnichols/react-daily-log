@@ -2,6 +2,20 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 
 export class App extends React.Component {
+  constructor() {
+    super();
+
+    this.setState({
+      logs: [
+        {
+          id: 123,
+          name: 'Mr Smith',
+          timestamp: 178374343
+        }
+      ]
+    });
+  }
+
   render() {
     return (
       <div className="container-fluid">
@@ -22,6 +36,7 @@ App.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
+  console.log('mapStateToProps', state, ownProps);
   return {};
 }
 
