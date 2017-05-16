@@ -8,8 +8,8 @@ class List extends React.Component {
   }
 }
 
-// List.PropTypes = {
-//   logs: PropTypes.array.isRequired
-// };
+List.PropTypes = {
+  logs: PropTypes.array.isRequired
+};
 
 export default List;

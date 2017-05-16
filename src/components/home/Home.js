@@ -1,7 +1,22 @@
 import React from "react";
 import Form from '../form/Form';
+import List from '../list/List';
 
 class Home extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      logs: [
+        {
+          id: 123,
+          name: 'Mr Smith',
+          timestamp: 178374343
+        }
+      ]
+    };
+  }
+
 	render() {
 		return (
 			<div>
@@ -24,7 +39,7 @@ class Home extends React.Component {
 						<h3>Logs</h3>
 					</div>
 					<div className="panel-body">
-						<div className="list"></div>
+						<List logs={this.state.logs} />
 					</div>
 				</div>
 			</div>

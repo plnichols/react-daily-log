@@ -1,25 +1,27 @@
 import React from "react";
 import expect from "expect";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import List from "./List";
+
+const logs = [
+  {
+    id: 123,
+    name: 'Some name',
+    timestamp: 123456789
+  }
+];
 
 // Unit Under Test
 function uut() {
-	return shallow(<List />);
+	return mount(<List logs={logs} />);
 }
 
 describe('List', () => {
-	it('should receive props from parent component', function() {
+	it('should receive props from its parent component', function() {
 		const wrapper = uut();
-
-		console.log(wrapper.props());
-
-		expect(wrapper.props()).toExist();
-	});
-
-	xit('should start with an empty list', function() {
-		const wrapper = uut();
-
-		expect(wrapper.props.logs.length).toNotBe(0);
+    expect(wrapper.props().logs.length).toBe(1);
+    expect(wrapper.props().logs[0].id).toBe(123);
+    expect(wrapper.props().logs[0].name).toBe('Some name');
+		expect(wrapper.props().logs[0].timestamp).toBe(123456789);
 	});
 });

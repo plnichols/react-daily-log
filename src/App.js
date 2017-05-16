@@ -1,20 +1,6 @@
 import React, {PropTypes} from 'react';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      logs: [
-        {
-          id: 123,
-          name: 'Mr Smith',
-          timestamp: 178374343
-        }
-      ]
-    };
-  }
-
   render() {
     return (
       <div className="container-fluid">

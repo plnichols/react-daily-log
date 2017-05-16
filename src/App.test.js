@@ -13,7 +13,6 @@ function uut() {
 describe("App", () => {
   it("should render the header, footer and container", () => {
     const wrapper = uut();
-
     expect(wrapper.find(".header").node).toExist();
     expect(wrapper.find(".content").node).toExist();
     expect(wrapper.find(".footer").node).toExist();
@@ -21,7 +20,6 @@ describe("App", () => {
 
   it("should render the home component in the content element", () => {
     const wrapper = uut();
-
     expect(wrapper.find(".content").find(".home").node).toExist();
   });
 });
