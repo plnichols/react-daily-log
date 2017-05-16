@@ -8,11 +8,7 @@ class Home extends React.Component {
 
     this.state = {
       logs: [
-        {
-          id: 123,
-          name: 'Mr Smith',
-          timestamp: 178374343
-        }
+        {id: 123, text: 'Lorem ipsum sit dolor amet', timestamp: 178374343 }
       ]
     };
   }
@@ -25,23 +21,8 @@ class Home extends React.Component {
 					<p className="home__description">React, Redux and React Router in ES6 for ultra responsive web apps.</p>
 				</div>
 
-				<div className="panel panel-default">
-					<div className="panel-heading">
-						<h3>New entry</h3>
-					</div>
-					<div className="panel-body">
-						<Form/>
-					</div>
-				</div>
-
-				<div className="panel panel-default">
-					<div className="panel-heading">
-						<h3>Logs</h3>
-					</div>
-					<div className="panel-body">
-						<List logs={this.state.logs} />
-					</div>
-				</div>
+				<Form />
+				<List logs={this.state.logs} />
 			</div>
 		);
 	}
