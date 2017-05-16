@@ -15,7 +15,7 @@ describe('Form', () => {
     expect(wrapper.find('.form__submit')).toExist();
   });
 
-  it('should update the state when typing', function() {
+  xit('should update the state when typing', function() {
     const wrapper = uut();
     expect().toBe();
   });

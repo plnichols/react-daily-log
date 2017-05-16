@@ -1,11 +1,10 @@
 import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
 
-export class App extends React.Component {
+class App extends React.Component {
   constructor() {
     super();
 
-    this.setState({
+    this.state = {
       logs: [
         {
           id: 123,
@@ -13,7 +12,7 @@ export class App extends React.Component {
           timestamp: 178374343
         }
       ]
-    });
+    };
   }
 
   render() {
@@ -35,9 +34,4 @@ App.propTypes = {
   children: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ownProps) {
-  console.log('mapStateToProps', state, ownProps);
-  return {};
-}
-
-export default connect(mapStateToProps)(App);
+export default App;

@@ -9,9 +9,17 @@ function uut() {
 }
 
 describe('List', () => {
-	it('should start with an empty list', function() {
-    const wrapper = uut();
+	it('should receive props from parent component', function() {
+		const wrapper = uut();
 
-    expect(wrapper.props.logs.length).toBe(0);
+		console.log(wrapper.props());
+
+		expect(wrapper.props()).toExist();
+	});
+
+	xit('should start with an empty list', function() {
+		const wrapper = uut();
+
+		expect(wrapper.props.logs.length).toNotBe(0);
 	});
 });

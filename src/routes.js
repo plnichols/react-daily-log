@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import App from './App'; //eslint-disable-line import/no-named-as-default
+import App from './App';
 import Home from './components/home/Home';
 
 export default (
